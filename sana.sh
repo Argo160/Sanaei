@@ -339,8 +339,15 @@ EOF
         echo -e "\033[33mInstalling Sanaei...\033[0m" #yellow Color
         bash <(curl -Ls https://raw.githubusercontent.com/mhsanaei/3x-ui/master/install.sh)
 
+        web_base_path=$(/usr/local/x-ui/x-ui setting -show true | grep 'webBasePath:' | awk '{print $2}' | tr -d ':')
+        ip_add=$(hostname -I | awk '{print $1}')
+        port_base_path=$(/usr/local/x-ui/x-ui setting -show true | grep 'port:' | awk '{print $2}' | tr -d ':')
+
+        echo -e "\e[32mYour Path to the pannel is:\033[0m"
+        echo -e "\033[33m$ip_add:$port_base_path$web_base_path\033[0m"
+
    
-        read -p "Reboot now? (Recommended) (y/n)" reb
+        read -p "Reboot now? (Recommended) (y/n): " reb
         echo 
         while true; do
             echo 
