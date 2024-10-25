@@ -7,5 +7,5 @@ wget https://raw.githubusercontent.com/Argo160/Sanaei/main/sana.sh -O sana.sh &&
 
 BBR + Swap only
 ```shell
-wget https://raw.githubusercontent.com/Argo160/Sanaei/main/sana.sh -O sana.sh && chmod +x sana.sh && bash sana.sh
+wget https://raw.githubusercontent.com/Argo160/Sanaei/main/bbr-swap.sh -O bbr-swap.sh && chmod +x bbr-swap.sh && bash bbr-swap.sh
 ```
