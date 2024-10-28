@@ -18,11 +18,6 @@ SWAP_SIZE=2G
 function main_menu {
     clear
     cd
-    read -p "Are you ready to setup the Sanaei? (y/n): " pp
-    # Convert input to lowercase
-    pp_lowercase=$(echo "$pp" | tr '[:upper:]' '[:lower:]')
-    # Check if the input is "y"
-    if [ "$pp_lowercase" = "y" ]; then
         apt-get update && apt-get upgrade -y
         echo
         echo -e "\e[32mSystem Updated and Upgraded.\e[0m"  # Green color for UP
@@ -350,8 +345,5 @@ EOF
                 break
             fi
         done    
-    
-    
-    fi
 }
 main_menu
