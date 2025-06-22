@@ -18,42 +18,6 @@ SWAP_SIZE=2G
 function main_menu {
     clear
     cd
-        apt-get update && apt-get upgrade -y
-        echo
-        echo -e "\e[32mSystem Updated and Upgraded.\e[0m"  # Green color for UP
-        echo
-        sleep 0.5
-        echo -e "\033[33mInstalling Curl...\033[0m" #yellow Color
-        apt-get install -y curl
-        if command -v curl > /dev/null; then
-            echo
-            echo -e "\e[32mCurl Installed.\e[0m"  # Green color for UP
-            echo
-            sleep 0.5
-        else
-            echo
-            echo -e "\033[31mCurl is not installed.\033[0m"  # Print in red
-            echo
-            sleep 0.5
-        fi
-        
-        echo
-        echo -e "\033[33mInstalling socat...\033[0m" #yellow Color
-        echo
-        sleep 0.5
-        apt-get install -y socat
-        if command -v socat > /dev/null; then
-            echo
-            echo -e "\e[32msocat Installed.\e[0m"  # Green color for UP
-            echo
-            sleep 0.5
-        else
-            echo
-            echo -e "\033[31msocat is not installed.\033[0m"  # Print in red
-            echo
-            sleep 0.5
-        fi
-
         echo
         ## Make Swap
         sudo fallocate -l $SWAP_SIZE $SWAP_PATH  ## Allocate size
